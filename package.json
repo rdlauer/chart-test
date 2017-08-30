@@ -1,0 +1,18 @@
+{
+  "description": "NativeScript Application",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "readme": "NativeScript Application",
+  "repository": "<fill-your-repository-here>",
+  "nativescript": {
+    "id": "org.nativescript.charttabtest",
+    "tns-ios": {
+      "version": "3.1.0"
+    }
+  },
+  "dependencies": {
+    "nativescript-telerik-ui-pro": "file:///Users/rob/Documents/Telerik/UI for NativeScript 3.0.4.201/Packages/nativescript-ui-pro.tgz",
+    "nativescript-theme-core": "~1.0.2",
+    "tns-core-modules": "3.1.1"
+  },
+  "devDependencies": {}
+}

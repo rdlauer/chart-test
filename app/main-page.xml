@@ -1,0 +1,41 @@
+<Page 
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:chart="nativescript-telerik-ui-pro/chart"
+  class="page" loaded="pageLoaded">
+
+	<ActionBar class="action-bar" title="Pokémon Data"></ActionBar>
+
+	<TabView class="tab-view">
+		<TabView.items>
+			<TabViewItem title="Tab One" class="tab-view-item">
+				<TabViewItem.view>
+					<StackLayout class="p-20">
+						<Label class="h1" text="Anime"></Label>
+						<Label class="body" textWrap="true" text="The following is a graph of the number of episodes in each Pokémon anime series over time."></Label>
+
+						<chart:RadCartesianChart class="m-t-10 chart-round" height="500">
+						<chart:RadCartesianChart.series>
+							<chart:LineSeries
+							items="{{ animeData }}"
+							categoryProperty="season"
+							valueProperty="count">
+							<chart:LineSeries.horizontalAxis>
+								<chart:CategoricalAxis labelFitMode="Rotate" majorTickInterval="2" />
+							</chart:LineSeries.horizontalAxis>
+							<chart:LineSeries.verticalAxis>
+								<chart:LinearAxis labelLayoutMode="Outer" />
+							</chart:LineSeries.verticalAxis>
+							</chart:LineSeries>
+						</chart:RadCartesianChart.series>
+						</chart:RadCartesianChart>
+					</StackLayout>
+                </TabViewItem.view>
+            </TabViewItem>
+            <TabViewItem title="Tab Two" class="tab-view-item">
+                <TabViewItem.view>
+					<Label text="Another tab!" class="h2" />
+				</TabViewItem.view>
+			</TabViewItem>
+		</TabView.items>
+	</TabView>
+</Page>
